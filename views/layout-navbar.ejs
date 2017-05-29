@@ -1,0 +1,16 @@
+<nav style="background-color:black; height:80px;">
+	<ul class="header_nav" style="float:left; width: 100%; margin-top: 25px;">
+		<li><a href="/main" style="color:#51cefc; margin-left: 50px;font-size: 20px;">Menu Management</a></li>
+
+    	<% if (user.is_admin == 1) { %>
+      		<li><a href="/mealRegister" style="margin-left: 30px;font-size: 20px;">register</a></li>
+      		<li><a href="/statistics" style="margin-left: 30px;font-size: 20px;">statistics</a></li>
+      		<li><a href="/mealModify" style="margin-left: 30px;font-size: 20px;">modify</a></li>
+		<% } %>
+
+		<li style="float:right; margin-right: 30px;font-size: 20px;"> <a href="/logout">logout</a></li>
+	</ul>
+</nav>
+
+
+

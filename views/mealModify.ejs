@@ -1,0 +1,49 @@
+<% include layout-head %>
+<% include layout-nav %>
+
+<table class="table table-bordered"><thead><tr><td class="">날짜</td><td width="70px" class="">이미지</td><td class="">메뉴</td><td class="">메뉴</td><td class="">메뉴</td><td class="">메뉴</td><td class="">메뉴</td><td class="">메뉴</td><td class="">버튼</td></tr></thead></table>
+<% for(var i = 0; i < mealData.length; i++) {   %>
+<form action="/mealModify" method="post" enctype="multipart/form-data">
+    <table class="table table-bordered"><tbody>
+        <tr><input name="mealDate" type="hidden" value="2017-5-1"><td width="150px" nowrap="" id="2017-5-1" class="date-cell ">
+                <%= mealData[i].date %> 아침
+            </td><td><input type="file" name="morningImage">
+            </td><td><input type="text" name="morningMenu1" value="<%mealData[i].morning.mainMenu1%>">
+            </td><td><input type="text" name="morningMenu2" value="<%=mealData[i].morning.mainMenu2%>">
+            </td><td><input type="text" name="morningMenu3" value="<%=mealData[i].morning.mainMenu3%>">
+            </td><td><input type="text" name="morningMenu4" value="<%=mealData[i].morning.mainMenu4%>">
+            </td><td><input type="text" name="morningMenu5" value="<%=mealData[i].morning.mainMenu5%>">
+            </td><td><input type="text" name="morningSideMenu" value="<%=mealData[i].morning.sideMenu%>">
+            </td><td><input type="submit"></td></tr></tbody></table></form>
+
+<form action="/mealModify" method="post" enctype="multipart/form-data">
+    <table class="table table-bordered"><tbody><tr><input name="mealDate" type="hidden" value="2017-5-1"><td width="150px" nowrap="" id="2017-5-1" class="date-cell ">
+                <%= mealData[i].date %> 점심
+            </td><td><input type="file" name="lunchImage">
+            </td><td><input type="text" name="lunchMenu1" value="<%mealData[i].lunch.mainMenu1%>">
+            </td><td><input type="text" name="lunchMenu2" value="<%mealData[i].lunch.mainMenu2%>">
+            </td><td><input type="text" name="lunchMenu3" value="<%mealData[i].lunch.mainMenu3%>">
+            </td><td><input type="text" name="lunchMenu4" value="<%mealData[i].lunch.mainMenu4%>">
+            </td><td><input type="text" name="lunchMenu5" value="<%mealData[i].lunch.mainMenu5%>">
+            </td><td><input type="text" name="lunchSideMenu" value="<%mealData[i].lunch.sideMenu%>">
+            </td><td><input type="submit"></td></tr></tbody></table></form>
+
+<form action="/mealModify" method="post" enctype="multipart/form-data">
+    <table class="table table-bordered"><tbody><tr><input name="mealDate" type="hidden" value="2017-5-1"><td width="150px" nowrap="" id="2017-5-1" class="date-cell ">
+                <%= mealData[i].date %> 저녁
+            </td><td><input type="file" name="dinnerImage">
+            </td><td><input type="text" name="dinnerMenu1" value="<%mealData[i].dinner.mainMenu1%>"></td><td>
+                <input type="text" name="dinnerMenu2" value="<%mealData[i].dinner.mainMenu2%>"></td><td>
+                <input type="text" name="dinnerMenu3" value="<%mealData[i].dinner.mainMenu3%>"></td><td>
+                <input type="text" name="dinnerMenu4" value="<%mealData[i].dinner.mainMenu4%>"></td><td>
+                <input type="text" name="dinnerMenu5" value="<%mealData[i].dinner.mainMenu5%>"></td><td>
+                <input type="text" name="dinnerSideMenu" value="<%mealData[i].dinner.sideMenu%>"></td><td>
+                <input type="submit"></td></tr></tbody></table></form>
+<%}%>
+
+
+
+
+
+</body>
+</html>
